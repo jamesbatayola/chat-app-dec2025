@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    /* === Language & Environment === */
+    "target": "es2024", // Modern, stable JS output
+    "lib": ["es2024"], // Match standard library APIs
+    "module": "nodenext", // Follow Node.js module rules (ESM + CJS interop)
+    "moduleResolution": "nodenext", // Node-style resolution
+
+    /* === Interop & Compatibility === */
+    "esModuleInterop": true, // Allow default imports from CommonJS
+    "forceConsistentCasingInFileNames": true, // Enforce consistent imports
+    "resolveJsonModule": true, // Allow importing JSON files
+    "allowSyntheticDefaultImports": true,
+
+    /* === Type Safety === */
+    "strict": true, // Enable all strict checks
+    "noImplicitAny": true, // Disallow untyped variables
+    "noUnusedLocals": true, // Prevent unused variables
+    "noUnusedParameters": true, // Prevent unused parameters
+    "noFallthroughCasesInSwitch": true, // Enforce safe switch usage
+    "noUncheckedIndexedAccess": true, // Safer array/object indexing
+
+    /* === Project Structure === */
+    "outDir": "./dist", // Output folder for compiled JS
+    "rootDir": "./src", // Source folder for TS files
+    "baseUrl": "./", // Enable absolute imports
+    "paths": {
+      // Example: shorten imports
+      "@/*": ["src/*"]
+    },
+
+    /* === Performance === */
+    "skipLibCheck": true, // Faster builds (skip type checking in node_modules)
+    "incremental": true, // Speed up repeated builds
+    "tsBuildInfoFile": "./.tsbuildinfo" // Cache build info
+  },
+
+  "include": ["src"], // Source files
+  "exclude": ["node_modules", "dist"] // Exclude build artifacts
+}
