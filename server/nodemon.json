@@ -1,8 +1,8 @@
 {
-  "watch": ["src"],
-  "ext": "ts",
-  "exec": "node src/main.ts",
-  "env": {
-    "NODE_ENV": "development"
-  }
+	"watch": ["src"],
+	"ext": "ts",
+	"exec": "tsx src/main.ts",
+	"env": {
+		"NODE_ENV": "development"
+	}
 }
