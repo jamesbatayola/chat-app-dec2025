@@ -1,92 +1,124 @@
 .app-wrapper {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f1f1f1;
-  padding: 20px;
-  width: 100vw;
+	/* min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #f1f1f1;
+	padding: 20px;
+	width: 100vw; */
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column; /* stack children vertically */
+	justify-content: center;
+	align-items: center; /* center horizontally */
+	background: #f1f1f1;
+	padding: 20px;
+	width: 100vw;
 }
 
 .chat-container {
-  width: 100%;
-  max-width: 420px;
-  height: 520px;
-  background: white;
-  border: 2px solid #d1d1d1;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 420px;
+	height: 520px;
+	background: white;
+	border: 2px solid #d1d1d1;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .messages-area {
-  flex: 1;
-  overflow-y: auto;
-  padding: 16px;
-  border-bottom: 1px solid #e0e0e0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+	flex: 1;
+	overflow-y: auto;
+	padding: 16px;
+	border-bottom: 1px solid #e0e0e0;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 }
 
 .placeholder {
-  text-align: center;
-  color: #888;
-  font-size: 14px;
+	text-align: center;
+	color: #888;
+	font-size: 14px;
 }
 
 .chat-bubble-you {
-  background: #9ccaff;
-  color: #003366;
-  padding: 10px 14px;
-  border-radius: 12px;
-  max-width: 80%;
-  width: fit-content;
-  font-size: 15px;
-  margin-left: auto;
+	background: #9ccaff;
+	color: #003366;
+	padding: 10px 14px;
+	border-radius: 12px;
+	max-width: 80%;
+	width: fit-content;
+	font-size: 15px;
+	margin-left: auto;
 }
 
 .chat-bubble-sender {
-  background: #e3f0ff;
-  color: #003366;
-  padding: 10px 14px;
-  border-radius: 12px;
-  max-width: 80%;
-  width: fit-content;
-  font-size: 15px;
+	background: #e3f0ff;
+	color: #003366;
+	padding: 10px 14px;
+	border-radius: 12px;
+	max-width: 80%;
+	width: fit-content;
+	font-size: 15px;
 }
 
 .input-area {
-  display: flex;
-  gap: 10px;
-  padding: 14px;
+	display: flex;
+	gap: 10px;
+	padding: 14px;
 }
 
 .input-area input {
-  flex: 1;
-  padding: 10px 14px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 15px;
+	flex: 1;
+	padding: 10px 14px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	font-size: 15px;
 }
 
 .input-area input:focus {
-  outline: none;
-  border-color: #4d90fe;
+	outline: none;
+	border-color: #4d90fe;
 }
 
 .input-area button {
-  background: #4d90fe;
-  color: white;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 15px;
-  transition: 0.2s ease;
+	background: #4d90fe;
+	color: white;
+	padding: 10px 16px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 15px;
+	transition: 0.2s ease;
 }
 
 .input-area button:hover {
-  background: #357ae8;
+	background: #357ae8;
+}
+
+/* Logout Button Styling */
+.logout-button {
+	position: fixed; /* fixed relative to viewport */
+	top: 20px; /* distance from top */
+	right: 20px; /* distance from right */
+	background: #ff6b6b; /* Soft red */
+	color: white;
+	border: none;
+	border-radius: 10px;
+	padding: 10px 16px;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.2s ease;
+	z-index: 1000; /* ensure it's above other elements */
+}
+
+.logout-button:hover {
+	background: #ff4c4c; /* Darker red on hover */
+}
+
+.logout-button:active {
+	transform: scale(0.97); /* subtle click effect */
 }

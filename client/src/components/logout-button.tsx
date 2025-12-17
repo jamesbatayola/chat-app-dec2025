@@ -10,5 +10,9 @@ export default function LogoutButton() {
 		navigate("/login", { replace: true });
 	};
 
-	return <button onClick={handleLogout}>Logout</button>;
+	return (
+		<button className="logout-button" onClick={handleLogout}>
+			Logout
+		</button>
+	);
 }
